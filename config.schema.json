@@ -1,0 +1,24 @@
+{
+    "pluginAlias": "interlogix",
+    "pluginType": "platform",
+    "singular": true,
+    "headerDisplay": "[aqicn](http://aqicn.org) plugin for [Homebridge](https://github.com/nfarina/homebridge).",
+    "footerDisplay": "Raise [Issues](https://github.com/Sunoo/homebridge-interlogix/issues) or submit [Pull Requests](https://github.com/Sunoo/homebridge-interlogix/pulls) on [Project Page](https://github.com/Sunoo/homebridge-aqicn).",
+    "schema": {
+        "type": "object",
+        "properties": {
+            "name": {
+                "title": "Name",
+                "type": "string",
+                "required": true,
+                "default": "Interlogix",
+                "description": "A unique name for the accessory. It will be used as the accessory name in HomeKit."
+            },
+            "dontLearn": {
+                "title": "Disable Learning",
+                "type": "boolean",
+                "description": "When set, new devices will not be added to HomeKit as they're noticed."
+            }
+        }
+    }
+}

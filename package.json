@@ -1,0 +1,72 @@
+{
+  "displayName": "Homebridge Interlogix",
+  "name": "homebridge-interlogix",
+  "version": "1.0.0",
+  "description": "blarglflarg",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Sunoo/homebridge-interlogix.git"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "interlogix",
+    "motion",
+    "contact",
+    "rtl_433"
+  ],
+  "author": "David Maher",
+  "license": "BSD-2-Clause",
+  "funding": [
+    {
+      "type": "kofi",
+      "url": "https://ko-fi.com/sunookitsune"
+    },
+    {
+      "type": "paypal",
+      "url": "https://paypal.me/sunoo"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/Sunoo"
+    },
+    {
+      "type": "liberapay",
+      "url": "https://liberapay.com/Sunoo"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Sunoo/homebridge-interlogix/issues"
+  },
+  "homepage": "https://github.com/Sunoo/homebridge-interlogix#readme",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "rimraf ./dist && tsc",
+    "lint": "eslint **/*.ts --fix",
+    "lint-check": "eslint **/*.ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint-check",
+    "postpublish": "npm run clean",
+    "watch": "npm run clean && tsc --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.28",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "homebridge": "^1.1.7",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.5"
+  },
+  "files": [
+    "config.schema.json",
+    "dist/**/*",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=10",
+    "homebridge": ">=1.0.0"
+  }
+}
